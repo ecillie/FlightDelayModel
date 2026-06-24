@@ -131,3 +131,15 @@ CREATE TABLE raw_ontime_flights (
     CRSDepHour INTEGER,
     CRSArrHour INTEGER
 );
+
+DROP TABLE IF EXISTS airports;
+
+CREATE TABLE airports (
+    iata_code TEXT PRIMARY KEY,
+    airport_name TEXT,
+    latitude REAL,
+    longitude REAL,
+    municipality TEXT,
+    state_region TEXT,
+    country_code TEXT
+);
