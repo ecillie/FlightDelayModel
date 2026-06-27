@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS raw_ontime_flights;
 
 CREATE TABLE raw_ontime_flights (
     Year INTEGER,
@@ -132,7 +131,7 @@ CREATE TABLE raw_ontime_flights (
     CRSArrHour INTEGER
 );
 
-DROP TABLE IF EXISTS airports;
+
 
 CREATE TABLE airports (
     iata_code TEXT PRIMARY KEY,
@@ -143,3 +142,23 @@ CREATE TABLE airports (
     state_region TEXT,
     country_code TEXT
 );
+
+
+
+CREATE TABLE weather_hourly (
+        airport_code TEXT,
+        weather_datetime TEXT,
+        weather_date TEXT,
+        weather_hour INTEGER,
+        latitude REAL,
+        longitude REAL,
+        temperature_2m REAL,
+        precipitation REAL,
+        rain REAL,
+        snowfall REAL,
+        wind_speed_10m REAL,
+        wind_gusts_10m REAL,
+        visibility REAL,
+        cloud_cover REAL,
+        PRIMARY KEY (airport_code, weather_datetime)
+    );
