@@ -29,7 +29,7 @@ END_YEAR = 2025
 
 TABLE_NAME = "weather_hourly"
 
-SLEEP_BETWEEN_SUCCESSFUL_REQUESTS = 30
+
 SLEEP_AFTER_RATE_LIMIT = 1800
 
 HOURLY_VARIABLES = [
@@ -237,7 +237,7 @@ def main():
 
             total_rows_inserted += len(weather_df)
 
-            time.sleep(SLEEP_BETWEEN_SUCCESSFUL_REQUESTS)
+            
 
     conn.close()
 

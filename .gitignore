@@ -1,4 +1,24 @@
-logs
-data/database
+# data and databases
+data/
+*.sqlite
+*.db
+
+# logs
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# virtual environments
+.env
+.venv/
+venv/
+
+# system files
 .DS_Store
-papers
+
+# papers / notes
+papers/
